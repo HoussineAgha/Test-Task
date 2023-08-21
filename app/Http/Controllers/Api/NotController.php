@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Validator;
 
 class NotController extends Controller
 {
+
+    public function index()
+    {
+        $allNote = Note::orderByDesc('created_at')->paginate(20);
+        return view('back.all-note',compact('allNote'));
+    }
     public function store(NotesRepo $notesrepo)
     {
         $result = $notesrepo->createnote();

@@ -31,6 +31,9 @@ class AuthController extends Controller
                     'error'=> $DataValidate->errors()
                 ],401);
             }
+            //user-Agent
+            $detect = new \Detection\MobileDetect;
+            $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
             //store new user
             $newUser = new User();
             $newUser->name = $request->name;
@@ -38,6 +41,7 @@ class AuthController extends Controller
             $newUser->role = 'user';
             $newUser->password = Hash::make($request->password);
             $newUser->email_verified_at = now();
+            $newUser->deviceType = $deviceType;
             $newUser->save();
 
             return response()->json([
@@ -76,6 +80,12 @@ class AuthController extends Controller
             //progress login
             $user = User::where('email',$request->email)->first();
             if ($user && auth()->attempt(['email' => request()->email, 'password' => request()->password, 'status' => true])) {
+                //user-Agent
+                $detect = new \Detection\MobileDetect;
+                $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
+                auth()->user()->update([
+                    'deviceType' => $deviceType,
+                ]);
                 return response()->json([
                     'status'=>true,
                     'message'=>'login user successfully',

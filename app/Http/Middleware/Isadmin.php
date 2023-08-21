@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Admin;
+use Auth;
 use Illuminate\Http\Request;
 
 class Isadmin

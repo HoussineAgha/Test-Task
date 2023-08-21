@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.alert-success {
+    width: 25%;
+    color: white;
+    background-color: #268d5f;
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    animation: fadeinout 5s linear forwards;
+    opacity: 1;
+    z-index: 10000;
+}
+
+@keyframes fadeinout {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+.alert-warning{
+    color: white;
+    background-color: orange;
+    width: 25%;
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    animation: fadeinout 15s linear forwards;
+    opacity: 0;
+    z-index: 10000;
+
+}

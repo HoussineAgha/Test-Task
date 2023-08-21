@@ -1,0 +1,157 @@
+/****************for mobile************/
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin: 0;
+        padding: 8px;
+        text-align: center;
+        background-color: #f8f9fa;
+        width: auto;
+    }
+
+    .background-image{
+        width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        margin: auto;
+        margin-top: 10px;
+        }
+    .container .row .col-6 iframe {
+            width: auto;
+        }
+        .info ul{
+            margin:0px 35px;
+            display: flex;
+        }
+        .info ul li{
+            list-style: none;
+        }
+        .col{
+            flex: auto;
+        }
+        .col-3 , .col-8 , .col-6 , .col-4{
+            width: 100%;
+            margin-right: 0px !important;
+        }
+        .nav-tabs{
+            margin-right: -30px !important;
+        }
+        .personal{
+            margin-top: -285px !important;
+        }
+        .pers{
+            text-align: center !important;
+        }
+        .data{
+            margin-bottom: 20px;
+        }
+        .profile-select{
+            display: block !important;
+        }
+        iframe{
+            width: 100%;
+        }
+        .image-box{
+            margin-bottom: 15px;
+        }
+        .header-replay{
+            display: block !important;
+        }
+        .information-project{
+            margin-top: 20px;
+        }
+        .dropdown-menu{
+            width: 260px !important;
+        }
+        .flex{
+            display: block !important;
+        }
+        .panel-body{
+            width: 100% !important;
+        }
+        .password-input .toggle-password{
+            right: 90% !important;
+        }
+    }
+
+    /*******media 575**************/
+    @media screen and (max-width: 575px) {
+        .navbar-nav {
+            margin: 0;
+            padding: 8px;
+            text-align: center;
+            background-color: #f8f9fa;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin: auto;
+            margin-top: 10px;
+            }
+        .container .row .col-6 iframe {
+            width: auto;
+        }
+        .info ul{
+            margin:0px 35px;
+            display: flex;
+        }
+        .info ul li{
+            list-style: none;
+        }
+        .col{
+            flex: auto;
+        }
+        .col-3 , .col-8 , .col-6 , .col-4,.col-5{
+            width: 100%;
+        }
+        .nav-tabs{
+            margin-right: -30px !important;
+        }
+        .personal{
+            margin-top: -285px !important;
+        }
+        .pers{
+            text-align: center !important;
+        }
+        .data{
+            margin-bottom: 20px;
+        }
+        .profile-select{
+            display: block !important;
+        }
+        iframe{
+            width: 100%;
+        }
+        .image-box{
+            margin-bottom: 15px;
+        }
+        .header-replay{
+            display: block !important;
+        }
+        .information-project{
+            margin-top: 20px;
+        }
+        .dropdown-menu{
+            width: 260px !important;
+        }
+        .flex{
+            display: block !important;
+        }
+        .panel-body{
+            width: 100% !important;
+        }
+        .password-input .toggle-password{
+            right: 90% !important;
+        }
+    }

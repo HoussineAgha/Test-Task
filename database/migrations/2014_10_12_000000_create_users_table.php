@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->boolean('status')->default(1);
             $table->string('role');
+            $table->string('deviceType');
             $table->rememberToken();
             $table->timestamps();
         });
