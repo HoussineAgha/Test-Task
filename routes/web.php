@@ -28,5 +28,9 @@ Route::prefix('admin')->group(function(){
         Route::get('/all-user',[AdminController::class , 'allUser'])->name('all.user');
         Route::get('/all-note',[NotController::class , 'index'])->name('all.note');
         Route::post('/note/create',[NotController::class ,'store'])->name('store.note');
+        Route::get('/note-edit/{note}',[NotController::class , 'edite'])->name('edit.note');
+        Route::put('/update/{note}',[NotController::class ,'update'])->name('update.note');
+        Route::get('/delete/{note}',[NotController::class ,'destory'])->name('destory.note');
+
     });
 });

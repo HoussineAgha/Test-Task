@@ -24,6 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/note/create',[NotController::class ,'store'])->middleware('auth:sanctum');
-Route::post('/note/{note}',[NotController::class ,'update'])->middleware('auth:sanctum');
-Route::delete('/note/{note}',[NotController::class ,'destory'])->middleware('auth:sanctum');
+Route::post('/note/update/{note}',[NotController::class ,'update'])->middleware('auth:sanctum');
+Route::delete('/note/delete/{note}',[NotController::class ,'destory'])->middleware('auth:sanctum');
 

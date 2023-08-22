@@ -23,13 +23,14 @@ class NotController extends Controller
         return $result;
     }
 
-    public function edite()
+    public function edite(Note $note)
     {
-        //
+        return view('back.modules.edit-note',compact('note'));
     }
 
     public function update(Note $note , NotesRepo $notesrepo)
     {
+
         $result = $notesrepo->updatenote($note);
         return $result;
     }

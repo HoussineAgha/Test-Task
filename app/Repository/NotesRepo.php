@@ -19,7 +19,7 @@ class NotesRepo
         //validate
         $DataValidate = Validator::make(request()->all(),[
             'description'=>'required',
-            'image'=>'mimes:png,jpg,webp|max:10000'
+            'image'=>'sometimes|nullable|mimes:png,jpg,jpeg|max:100000'
         ]);
         if($DataValidate->fails()){
             return response()->json([
@@ -28,9 +28,12 @@ class NotesRepo
                 'error'=> $DataValidate->errors()
             ],401);
         }
+
+
         if(request()->hasFile('image')){
             $path='/storage/'.request()->file('image')->store('image_note',['disk'=>'public']);
         }
+
         $newNote = new Note();
         $newNote ->description = request()->description;
         $newNote->image = $path ?? null;
@@ -63,7 +66,7 @@ class NotesRepo
             //validate
             $DataValidate = Validator::make(request()->all(),[
                 'description'=>'required',
-                'image'=>'mimes:png,jpg,webp|max:10000'
+                'image'=>'mimes:png,jpg,jpeg,webp|max:10000'
             ]);
             if($DataValidate->fails()){
                 return response()->json([
