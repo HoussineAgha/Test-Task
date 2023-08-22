@@ -38,3 +38,14 @@
     z-index: 10000;
 
 }
+
+.backround {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/image/abstract-5387367_1920.jpg'); /* استبدل بمسار صورتك */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
